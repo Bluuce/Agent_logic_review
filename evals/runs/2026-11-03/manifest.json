@@ -1,0 +1,54 @@
+{
+  "date_utc": "2026-11-03T14:09:48.941157+00:00",
+  "cli_version": "0.166.0-alpha.5.1",
+  "model_requested": "gpt-6.1-sol",
+  "reasoning_effort_requested": "medium",
+  "config": "ignore-user-config; ephemeral; read-only; fresh cwd and context per call",
+  "skill_sha256": {
+    "SKILL.md": "506ccdb3a0cc002a6cf9c5fba4eca0d872f9d1fdb57c58e07191aa0db3ad8c90",
+    "agents/openai.yaml": "5cefb29acb393d6950f4553e9ece4061d6c683892235a7c13d4c9127e3abb9ff",
+    "references/rubric.md": "8aa509adda6f05026d6cce649f95bcb07d148d60e043d4da6d579105efddcdfa"
+  },
+  "case_count": 12,
+  "run_count": 24,
+  "parallelism": 4,
+  "per_call_timeout_seconds": 180,
+  "cost": "not available",
+  "temperature": "host default; not explicitly configured",
+  "limitations": [
+    "Author-written cases and author review; not independent validation.",
+    "Skill condition requires skill-reading tools; input/tool budgets differ.",
+    "Single sample per condition per case; no accuracy-improvement inference."
+  ],
+  "case_prompt_sha256": {
+    "checkpoint-dev-01": "6d3ac9cf2f109eed95cee694d3d6d961572ac85f6fe677180231af83ddad7c62",
+    "checkpoint-dev-02": "33b072ca8316bd60be4ef859e8fe9022b6aafdf55cda4653cf4a3fc257755ca4",
+    "checkpoint-dev-03": "2267220b23a3d41b81df93b72585b8ddc6471fd0cc520a8608295c3367945228",
+    "checkpoint-heldout-01": "8ae481a5c4e2d4153aee847c6fc3aa748010091c6146a6ce8d7dbe9b335c46b7",
+    "checkpoint-heldout-02": "eea7e6018b805455f638c2fd670c4e00e015f82c7bbbeebb3932a7a54b99ae4a",
+    "checkpoint-heldout-03": "76a795f441b48ba55636a4f4661c3cafbd562c870f454f330d8e23560f7d1aad",
+    "review-dev-01": "b4d4ed25db9d623ed6a6bec4c4d131dbc6640d1e246422ac8d3e6d43d84e46de",
+    "review-dev-02": "1efef5e5abf42aaa4e0839fa939ccbaedeed89d83a0ace17f33ffbd8c2611bab",
+    "review-dev-03": "d9bba4065e86c3b9ad22e460cb61000aa3830595aaf67ddd5670e2509354c54f",
+    "review-heldout-01": "67d2d0b21b1a5e3a3bb0f83c3e119dbbb9628424dc37a28ea9570b070ff94e19",
+    "review-heldout-02": "8ade79531f45d65f9b034689cce9e1740bd26d167bb0377c76993908cbb5530f",
+    "review-heldout-03": "1330bbef561c2a0f119bc87b19e1653e948bf512b9f2da78d5c027b30ca21235"
+  },
+  "command_template": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "-c",
+    "model_reasoning_effort=\"medium\"",
+    "--json",
+    "-C",
+    "<fresh-test-project>",
+    "-"
+  ]
+}

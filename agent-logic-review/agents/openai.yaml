@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Logic Review"
+  short_description: "Score claim support and correct agent reasoning at checkpoints"
+  default_prompt: "Use $agent-logic-review to assess the key claim against its evidence, give a total out of 100, and suggest the smallest justified repair."
